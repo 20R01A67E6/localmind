@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0f0f0f;
+      color: #e8e8e8;
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      user-select: none;
+      -webkit-app-region: drag;
+      overflow: hidden;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 3px solid #d4a843;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      background: #1a1a1a;
+    }
+    .logo-text {
+      color: #d4a843;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    h1 {
+      color: #e8e8e8;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    h1 span { color: #d4a843; }
+    .tagline {
+      color: #606060;
+      font-size: 12px;
+      margin-bottom: 36px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .dots {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      background: #d4a843;
+      border-radius: 50%;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes pulse {
+      0%, 80%, 100% { opacity: 0.15; transform: scale(0.75); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo"><span class="logo-text">LM</span></div>
+  <h1>Local<span>Mind</span></h1>
+  <p class="tagline">Offline AI · Powered by Ollama</p>
+  <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #e8e8e8;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2e2e2e;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3e3e3e;
+  }
+}
+
+@layer components {
+  .prose-dark {
+    color: #e8e8e8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  .prose-dark h1, .prose-dark h2, .prose-dark h3 {
+    color: #ffffff;
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose-dark p {
+    margin-bottom: 0.75em;
+    line-height: 1.7;
+  }
+
+  .prose-dark code {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 0.125em 0.375em;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875em;
+  }
+
+  .prose-dark pre {
+    background: #1e1e2e;
+    border: 1px solid #2a2a3e;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+    max-width: 100%;
+    white-space: pre;
+    margin: 0.75em 0;
+  }
+
+  .prose-dark pre code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .prose-dark ul, .prose-dark ol {
+    padding-left: 1.5em;
+    margin-bottom: 0.75em;
+  }
+
+  .prose-dark li {
+    margin-bottom: 0.25em;
+  }
+
+  .prose-dark blockquote {
+    border-left: 3px solid #d4a843;
+    padding-left: 1em;
+    color: #a0a0a0;
+    margin: 0.75em 0;
+  }
+
+  .prose-dark a {
+    color: #d4a843;
+    text-decoration: underline;
+  }
+
+  .prose-dark table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75em 0;
+  }
+
+  .prose-dark th, .prose-dark td {
+    border: 1px solid #2a2a2a;
+    padding: 0.5em 0.75em;
+    text-align: left;
+  }
+
+  .prose-dark th {
+    background: #1a1a1a;
+    color: #ffffff;
+  }
+}
+
+.titlebar-drag {
+  -webkit-app-region: drag;
+}
+.titlebar-no-drag {
+  -webkit-app-region: no-drag;
+}
